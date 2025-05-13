@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Health Monitoring App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .register-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .register-container h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .register-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .register-container label{
+            display: block;
+            font-size: 14px;
+            color: #34495e;
+            margin-bottom: 8px;
+            font-weight: 500;
+            text-align: left;
+        }
+
+
+        .register-container input {
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+            width: calc(100% - 30px);
+        }
+
+        .register-container input:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+        }
+
+        .register-container button {
+            padding: 12px 15px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .register-container button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+        }
+
+        .register-container button:active {
+            background-color: #388e3c;
+            transform: translateY(0);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .register-container p {
+            font-size: 14px;
+            color: #777;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .register-container a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .register-container a:hover {
+            color: #217dbb;
+        }
+
+        .register-container .left-column{
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .register-container .right-column {
+            flex: 1;
+            background-image: url('images/Background.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .register-container .form-group{
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .register-container small{
+            display: block;
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+            text-align: left;
+        }
+        .register-container .or-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 25px 0;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .register-container .or-divider::before,
+        .register-container .or-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .register-container {
+                flex-direction: column;
+                max-width: 100%;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .register-container .right-column{
+                display: none;
+            }
+            .register-container .left-column{
+                padding: 20px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="register-container">
+        <div class="left-column">
+    <h1>Register for Health Monitoring App</h1>
+
+    <!-- Registration Form -->
+    <form action="/register" method="POST">
+
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            <small>Enter your Full Name</small>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            <small>Enter your email address</small>
+        </div>
+
+        <div class="form-group">
+            <label for="height">Height</label>
+            <input type="text" id="height" name="height" required>
+            <small>Enter your Height</small>
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight</label>
+            <input type="text" id="weight" name="weight" required>
+            <small>Enter your weight</small>
+        </div>
+        <div class="form-group">
+            <label for="bloodGroup">Blood Group</label>
+            <input type="text" id="bloodGroup" name="bloodGroup" required>
+            <small>Enter your Blood Group</small>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+            <small>Enter your Age</small>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+            <small>Enter your Date Of Birth</small>
+        </div>
+
+
+        <div class="form-group">
+            <label for="password">Set Password</label>
+            <input type="password" id="password" name="password" required>
+            <small>Set Your Password</small>
+        </div>
+
+
+        <button type="submit">Register</button>
+    </form>
+            <div class="or-divider">Or
+            </div>
+            <div class="sign-up-link">
+                <p>Already have an account? <a href="/">Login here</a></p>
+            </div>
+</div>
+    </div>
+<div class="right-column">
+
+</div>
+<script src="/js/main.js"></script>
+</body>
+</html>
