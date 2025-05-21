@@ -55,6 +55,7 @@ A responsive, dark-themed Health Monitoring Web Application that simulates smart
 - (Optional) Twilio or any SMS API for SMS alerts
 
 ## 📂 Folder Structure
+```bash
 /project-root
 │
 ├── public/ # Frontend files
@@ -74,7 +75,7 @@ A responsive, dark-themed Health Monitoring Web Application that simulates smart
 ├── utils/ # Helper functions (validation, tips, etc.)
 ├── app.js # Main server file
 └── README.md
-
+```
 
 ## 🧪 Setup Instructions
 
@@ -118,4 +119,72 @@ Admin dashboard for global health monitoring
 
 ## 🙋‍♂️ Author
 **Dinakar L** – 2nd Year CSE Student at TJS Engineering College
+
+## 📸 Screenshots
+
+### 🔐 Login Page
+
+![Login Page](./Screenshots/login.png)
+
+### ⌚ Link Smart Watch
+
+![Dashboard](./Screenshots/Link.png)
+
+### 📊 Dashboard
+
+![Dashboard](./Screenshots/Dashboard.png)
+
+## 👥 User Flow
+
+1. Register & verify email
+2. Log in and link simulated smartwatch
+3. View health data
+4. Get alerts if abnormal values are detected
+5. Add personal doctor (optional)
+
+## 📡 Backend API Endpoints
+
+| Method | Route             | Description               |
+|--------|------------------|---------------------------|
+| POST   | /register         | Register a new user       |
+| POST   | /login            | Login with credentials    |
+| GET    | /health-data      | Fetch mock health data    |
+| POST   | /add-doctor       | Add a personal doctor     |
+
+## 🧪 Demo Account (for testing)
+
+**Email:** demo@example.com  
+**Password:** Demo@123
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+Feel free to fork the repo, open issues, or submit pull requests. ✨
+
+### 🚀 Steps to Contribute
+
+1. 🍴 **Fork** the repo
+2. 🌿 **Create a new branch**  
+   `git checkout -b feature-name`
+3. 💾 **Commit your changes**
+4. 📤 **Push** to your fork
+5. 🔁 **Open a Pull Request**
+
+## 🙏 Credits / Acknowledgements
+
+Big thanks to the following tools and resources that made this project possible:
+
+- 🎨 **UI Inspiration**: Modern smartwatch and health dashboard designs
+- 📧 **Email Service**: [Nodemailer](https://nodemailer.com/)
+- 📦 **Backend Framework**: [Express.js](https://expressjs.com/)
+- 🗃️ **Database**: [MySQL](https://www.mysql.com/)
+- 🖼️ **Icons & Graphics**: [Font Awesome](https://fontawesome.com/)
+
+## ⚠️ Known Issues / Limitations
+
+- 🔄 Smartwatch data is **simulated**, not real-time.
+- 📶 SMS notifications require proper **API key setup**.
+- 🐞 Some UI elements may not be fully responsive on all devices.
+- ⏳ Data fetch intervals are fixed and not customizable by the user yet.
+- 🔐 No multi-factor authentication (MFA) implemented currently.
 
